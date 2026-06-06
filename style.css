@@ -1,0 +1,309 @@
+:root {
+    --primary-color: #1A82C4; /*Buttons,  */
+    --secondary-color: #E2E8F0; /*Backgrounds  */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+input, button {
+    font: inherit;
+}
+
+p, h1, h2, h3 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3 {
+    text-wrap: balance;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr;
+}
+
+/*============= Header ============= */
+header {
+    grid-column: 2 / 3;
+    display: grid;
+    align-content: center;
+    gap: 16px;
+    padding: 1rem;
+}
+
+.header-bar {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-content: center;
+}
+
+.header-bar-search {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-content: center;
+    padding: 0 4rem 0 1rem;
+}
+
+input[type="search"] {
+    border: none;
+    border-radius: 18px;
+    background-color: var(--secondary-color);
+    padding: 0.2rem 0.8rem;
+}
+input[type="search"]:focus {
+    outline: none
+}
+
+.header-bar-profile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img[src="icons/search.svg"] {
+    height: 32px;
+    margin-top: 4px;
+}
+
+img[src="icons/notifications.svg"] {
+    height: 32px;
+}
+
+img[src="Images/odin-lined.png"],
+.trend-list > img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: rgb(200, 175, 40);
+}
+
+/* ---------------------------------------- */
+
+.header-action {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+}
+
+.header-action-profile {
+    display: flex;
+}
+
+.header-action-profile > div {
+    display: grid;
+    align-self: center;
+    padding-left: 1rem;
+}
+
+.header-action-profile > img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: rgb(200, 175, 40);
+    object-fit: contain;
+}
+
+.greeting, .greeting-profile {
+    font-weight: bold;
+    line-height: 1.2;
+}
+.greeting {
+    font-size: 0.9rem;
+}
+.greeting-profile {
+    font-size: 1.4rem;
+}
+
+.header-action-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-action-btns button {
+    padding: 0.3rem 1.8rem;
+    border-radius: 24px;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-weight: 700;
+}
+
+/* =========== Sidebar =========== */
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0 0 2rem;
+}
+
+.sidebar-dash h1 a {
+    display: flex;
+}
+
+.sidebar-dash h1 {
+    font-size: 1.6rem;
+}
+
+.sidebar img {
+    margin-right: 0.8rem;
+}
+
+.sidebar > ul > li {
+    padding: 0.5rem 0;
+}
+.sidebar > ul > li > a {
+    display: flex;
+}
+
+.sidebar > ul {
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+/* ========== Main content ========== */
+main {
+    background-color: var(--secondary-color);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 1rem 1.5rem 1rem 2rem;
+}
+
+.project > h2,
+.announcements-section > h2,
+.trending-section > h2 {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.card-items {
+    min-height: 250px;
+    border-left: 8px solid orange;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.2rem;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.card-texts > p {
+    color: #718096;
+}
+
+.card-icons {
+    position: absolute;
+    bottom: 0;
+    align-self: flex-end;
+    padding: 0 1.2rem 1.4rem 1.2rem;
+}
+
+.card-icons > img {
+    padding: 0 0.5rem;
+    text-align: center;
+    height: 24px;
+}
+
+/* ======== Side Content ======== */
+
+/* ------Announcement section-------- */
+.announcements-section,
+.trending-section {
+    padding-left: 1.5rem;
+}
+
+.announcements,
+.trends {
+    background-color: #ffffff;
+    color: #718096;
+    padding: 1.4rem 1rem 1.4rem 2rem;
+    border-radius: 12px;
+}
+
+.as-list {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1rem 0;
+}
+
+.as-list:first-child {
+    padding-top: 0;
+}
+
+.as-list:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+.as-list > h3,
+.trend-list > div > span {
+    color: black;
+}
+
+.as-list > h3 {
+    font-size: 0.8rem;
+}
+
+.as-list > p {
+    font-size: 0.7rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+/* ------Trend Section------- */
+.trending-section {
+    margin-top: 1.2rem;
+}
+
+.trend-list {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.8rem;
+}
+
+.trend-list div {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    font-size: 0.7rem;
+}
